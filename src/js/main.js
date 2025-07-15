@@ -233,39 +233,65 @@ function initWaitlistForm() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Joining...';
             submitBtn.disabled = true;
             
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
-                // Hide form and show success message
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-                
-                // Track conversion event (Google Analytics)
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'GA_MEASUREMENT_ID/CONVERSION_ID',
-                        'value': 1.0,
-                        'currency': 'AUD'
-                    });
-                }
-                
-                // Show success notification
-                showNotification('Successfully joined the waitlist! Check your email for next steps.', 'success');
-                
-                // Reset form
-                form.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                
-                // Store user data in localStorage for analytics
-                localStorage.setItem('waitlistSignup', JSON.stringify({
+            // Submit to Formspree
+            fetch('https://formspree.io/f/xeozqjpo', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
                     email: data.email,
                     firstName: data.firstName,
-                    providerType: data.providerType,
-                    state: data.state,
-                    timestamp: new Date().toISOString()
-                }));
-                
-            }, 2000); // Simulate network delay
+                    organization: data.organization || '',
+                    providerType: data.providerType || '',
+                    state: data.state || '',
+                    _subject: 'New NDIS Pulse Waitlist Signup',
+                    _replyto: data.email
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Hide form and show success message
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    // Track conversion event (Google Analytics)
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'G-9TTNT05G3N/waitlist_signup',
+                            'value': 1.0,
+                            'currency': 'AUD'
+                        });
+                    }
+                    
+                    // Show success notification
+                    showNotification('Successfully joined the waitlist! Check your email for confirmation.', 'success');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Store user data in localStorage for analytics
+                    localStorage.setItem('waitlistSignup', JSON.stringify({
+                        email: data.email,
+                        firstName: data.firstName,
+                        providerType: data.providerType,
+                        state: data.state,
+                        timestamp: new Date().toISOString()
+                    }));
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Oops! Something went wrong. Please try again or email us at jaysonryan2107@gmail.com', 'error');
+            })
+            .finally(() => {
+                // Re-enable submit button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 }
