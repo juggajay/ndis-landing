@@ -1257,3 +1257,53 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+/* ===== RESPONSIVE IMAGE CLASSES ===== */
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.feature-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trust-badge {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Mobile Responsiveness for Images */
+@media (max-width: 768px) {
+    .feature-image {
+        max-width: 400px;
+    }
+    
+    .testimonial-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .trust-badge {
+        width: 80px;
+        margin: 5px;
+    }
+}
+
