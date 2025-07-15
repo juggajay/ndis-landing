@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "ndis-compliance-pro",
+  "name": "ndis-landing",
   "builds": [
     {
       "src": "index.html",
