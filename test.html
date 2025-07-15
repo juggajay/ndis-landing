@@ -2,6 +2,11 @@
 <html>
 <head>
     <title>Test Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-test { margin: 20px 0; border: 1px solid #ccc; padding: 10px; }
+        .image-test img { display: block; margin: 10px 0; max-width: 200px; }
+    </style>
 </head>
 <body>
     <h1>Test Page - Deployment Working!</h1>
@@ -9,5 +14,15 @@
     <p>CSS File exists: <a href="./src/css/styles.css">Check CSS</a></p>
     <p>JS File exists: <a href="./src/js/main.js">Check JS</a></p>
     <p>Timestamp: <script>document.write(new Date().toISOString());</script></p>
+    
+    <div class="image-test">
+        <h2>Image Tests:</h2>
+        <p>Logo:</p>
+        <img src="./images/logo-ndis-compliance-pro.png" alt="Logo Test">
+        <p>Hero Dashboard:</p>
+        <img src="./images/hero-dashboard-mockup.png" alt="Hero Test">
+        <p>Trust Badge:</p>
+        <img src="./images/trust-badge-ndis-compliant.png" alt="Trust Badge Test">
+    </div>
 </body>
 </html>
