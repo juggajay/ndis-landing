@@ -286,7 +286,7 @@ body {
 .hero__img {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow-lg);
     animation: float 6s ease-in-out infinite;
