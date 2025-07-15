@@ -1,4 +1,42 @@
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#663399"/>
-  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" dominant-baseline="middle">Dashboard</text>
+  <rect width="100%" height="100%" fill="#f8f9fa"/>
+  <rect x="0" y="0" width="800" height="60" fill="#663399"/>
+  <text x="20" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">NDIS Dashboard</text>
+  
+  <!-- Sidebar -->
+  <rect x="0" y="60" width="200" height="540" fill="#e9ecef"/>
+  <rect x="10" y="80" width="180" height="40" rx="5" fill="#663399"/>
+  <text x="100" y="105" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Dashboard</text>
+  <rect x="10" y="130" width="180" height="40" rx="5" fill="#f8f9fa"/>
+  <text x="100" y="155" font-family="Arial, sans-serif" font-size="14" fill="#343a40" text-anchor="middle">Claims</text>
+  <rect x="10" y="180" width="180" height="40" rx="5" fill="#f8f9fa"/>
+  <text x="100" y="205" font-family="Arial, sans-serif" font-size="14" fill="#343a40" text-anchor="middle">Clients</text>
+  <rect x="10" y="230" width="180" height="40" rx="5" fill="#f8f9fa"/>
+  <text x="100" y="255" font-family="Arial, sans-serif" font-size="14" fill="#343a40" text-anchor="middle">Reports</text>
+  
+  <!-- Main content area -->
+  <rect x="220" y="80" width="560" height="150" rx="10" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="240" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#343a40">Welcome to NDIS Compliance Pro</text>
+  <text x="240" y="140" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Your compliance score: 98%</text>
+  <circle cx="700" cy="155" r="40" fill="#28a745"/>
+  <text x="700" y="165" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">98%</text>
+  
+  <!-- Stats cards -->
+  <rect x="220" y="250" width="170" height="100" rx="10" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="305" y="280" font-family="Arial, sans-serif" font-size="14" fill="#6c757d" text-anchor="middle">Active Claims</text>
+  <text x="305" y="310" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#663399" text-anchor="middle">142</text>
+  
+  <rect x="410" y="250" width="170" height="100" rx="10" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="495" y="280" font-family="Arial, sans-serif" font-size="14" fill="#6c757d" text-anchor="middle">Total Clients</text>
+  <text x="495" y="310" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#008837" text-anchor="middle">89</text>
+  
+  <rect x="600" y="250" width="170" height="100" rx="10" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="685" y="280" font-family="Arial, sans-serif" font-size="14" fill="#6c757d" text-anchor="middle">Pending Tasks</text>
+  <text x="685" y="310" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#0052d4" text-anchor="middle">7</text>
+  
+  <!-- Chart area -->
+  <rect x="220" y="370" width="550" height="210" rx="10" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="240" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#343a40">Monthly Revenue Trend</text>
+  <line x1="240" y1="420" x2="750" y2="420" stroke="#e9ecef" stroke-width="1"/>
+  <polyline points="260,500 320,480 380,470 440,450 500,440 560,420 620,410 680,400 740,380" fill="none" stroke="#663399" stroke-width="3"/>
 </svg>
