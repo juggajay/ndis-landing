@@ -266,7 +266,7 @@ function initWaitlistForm() {
                     }
                     
                     // Show success notification
-                    showNotification('Successfully joined the waitlist! Check your email for confirmation.', 'success');
+                    showNotification('Successfully joined the waitlist! Please check your email (including spam/promotions folder) for confirmation. We\'ll be in touch within 24 hours.', 'success');
                     
                     // Reset form
                     form.reset();

@@ -1310,3 +1310,15 @@ body {
     }
 }
 
+/* Success Message Styles */
+.success-note {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.success-note a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
