@@ -176,7 +176,7 @@ body {
 }
 
 .nav__logo-img {
-    height: 40px;
+    height: 60px;
     width: auto;
 }
 
@@ -290,7 +290,7 @@ body {
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-10px); }
 }
 
 /* ===== PROBLEM/SOLUTION SECTION ===== */
@@ -978,10 +978,9 @@ body {
 }
 
 .footer__logo {
-    height: 40px;
+    height: 50px;
     width: auto;
     margin-bottom: var(--spacing-lg);
-    filter: brightness(0) invert(1);
 }
 
 .footer__description {
@@ -1286,7 +1285,7 @@ body {
 }
 
 .logo {
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
