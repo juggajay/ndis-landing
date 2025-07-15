@@ -1,0 +1,30 @@
+{
+  "name": "ndis-compliance-pro-landing",
+  "version": "1.0.0",
+  "description": "Professional landing page for NDIS Compliance Management Tool SaaS targeting Australian disability service providers",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "build": "echo 'Static site - no build required'",
+    "start": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "ndis",
+    "compliance",
+    "australia",
+    "disability-services",
+    "saas",
+    "landing-page"
+  ],
+  "author": "NDIS Compliance Pro",
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ndis-compliance-pro.git"
+  },
+  "homepage": "https://ndiscompliancepro.com.au",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
