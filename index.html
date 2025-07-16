@@ -1168,7 +1168,21 @@
         document.querySelectorAll('form[action*="formspree"]').forEach(form => {
             if (form.id !== 'exitPopupForm') {
                 form.addEventListener('submit', function() {
+                    // Store email for checklist pre-fill
+                    const emailInput = this.querySelector('input[name="email"]');
+                    if (emailInput && emailInput.value) {
+                        localStorage.setItem('waitlistEmail', emailInput.value);
+                    }
                     trackWaitlistSubmit('main_form');
+                });
+            } else {
+                form.addEventListener('submit', function() {
+                    // Store email for checklist pre-fill
+                    const emailInput = this.querySelector('input[name="email"]');
+                    if (emailInput && emailInput.value) {
+                        localStorage.setItem('waitlistEmail', emailInput.value);
+                    }
+                    trackWaitlistSubmit('exit_popup');
                 });
             }
         });

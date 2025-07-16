@@ -152,6 +152,252 @@
             color: #663399;
         }
         
+        /* Lead Magnet Styles */
+        .thank-you__lead-magnet {
+            background: linear-gradient(135deg, #663399 0%, #8B5A96 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .lead-magnet__title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .lead-magnet__description {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .lead-magnet__cta {
+            background: white;
+            color: #663399;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .lead-magnet__cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Checklist Modal Styles */
+        .checklist-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .checklist-modal__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .checklist-modal__content {
+            position: relative;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideInScale 0.3s ease-out;
+        }
+        
+        @keyframes slideInScale {
+            from {
+                transform: scale(0.9) translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .checklist-modal__close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #666;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .checklist-modal__close:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .checklist-form__header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .checklist-form__title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #343A40;
+            margin-bottom: 10px;
+        }
+        
+        .checklist-form__subtitle {
+            font-size: 16px;
+            color: #6C757D;
+        }
+        
+        .checklist-form__benefits {
+            margin-bottom: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .benefit-item i {
+            color: #28A745;
+            font-size: 18px;
+        }
+        
+        .checklist-form__form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .checklist-form__form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #343A40;
+        }
+        
+        .checklist-form__form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .checklist-form__form input:focus {
+            outline: none;
+            border-color: #663399;
+        }
+        
+        .checklist-form__submit {
+            width: 100%;
+            background: #663399;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+        
+        .checklist-form__submit:hover {
+            background: #522A7D;
+            transform: translateY(-1px);
+        }
+        
+        .checklist-form__note {
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        
+        /* Success View Styles */
+        .checklist-success {
+            text-align: center;
+        }
+        
+        .checklist-success__icon {
+            font-size: 60px;
+            color: #28A745;
+            margin-bottom: 20px;
+        }
+        
+        .checklist-success__title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #343A40;
+            margin-bottom: 15px;
+        }
+        
+        .checklist-success__message {
+            font-size: 18px;
+            color: #6C757D;
+            margin-bottom: 15px;
+        }
+        
+        .checklist-success__note {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+        
+        .checklist-success__close {
+            background: #663399;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .checklist-success__close:hover {
+            background: #522A7D;
+        }
+        
         @media (max-width: 768px) {
             .thank-you__container {
                 padding: 40px 20px;
@@ -168,6 +414,23 @@
             .social-button {
                 width: 100%;
                 justify-content: center;
+            }
+            
+            .thank-you__lead-magnet {
+                padding: 25px 20px;
+            }
+            
+            .lead-magnet__title {
+                font-size: 20px;
+            }
+            
+            .checklist-modal__content {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .checklist-form__title {
+                font-size: 24px;
             }
         }
     </style>
@@ -197,8 +460,18 @@
                 <ul style="text-align: left; margin: 10px 0;">
                     <li>Your 60% early bird discount code</li>
                     <li>Exclusive beta access invitation</li>
-                    <li>Free NDIS compliance checklist PDF</li>
+                    <li>Priority access to our beta program</li>
                 </ul>
+            </div>
+            
+            <!-- Lead Magnet Section -->
+            <div class="thank-you__lead-magnet">
+                <h2 class="lead-magnet__title">As a thank you, we've prepared something special for you...</h2>
+                <p class="lead-magnet__description">Get instant access to our comprehensive NDIS Compliance Checklist that's helped hundreds of providers stay audit-ready.</p>
+                <button class="lead-magnet__cta" id="getChecklistBtn">
+                    Get My Free Compliance Checklist
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
             
             <div class="thank-you__social">
@@ -226,13 +499,150 @@
             </p>
         </div>
     </div>
+
+    <!-- Checklist Modal -->
+    <div class="checklist-modal" id="checklistModal" style="display: none;">
+        <div class="checklist-modal__overlay"></div>
+        <div class="checklist-modal__content">
+            <button class="checklist-modal__close" id="closeChecklistModal">&times;</button>
+            
+            <!-- Form View -->
+            <div class="checklist-form" id="checklistForm">
+                <div class="checklist-form__header">
+                    <h2 class="checklist-form__title">Your NDIS Compliance Checklist 2025</h2>
+                    <p class="checklist-form__subtitle">The complete guide that ensures you're always audit-ready</p>
+                </div>
+                
+                <div class="checklist-form__benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>7 critical compliance areas</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>40+ essential checkpoints</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Save hours on audit prep</span>
+                    </div>
+                </div>
+                
+                <form class="checklist-form__form" id="checklistDownloadForm" action="https://formspree.io/f/xeozqjpo" method="POST">
+                    <input type="hidden" name="_source" value="checklist_download">
+                    <input type="hidden" name="_subject" value="NDIS Compliance Checklist Download Request">
+                    
+                    <div class="form-group">
+                        <label for="checklistName">Full Name *</label>
+                        <input type="text" id="checklistName" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checklistEmail">Email Address *</label>
+                        <input type="email" id="checklistEmail" name="email" required>
+                    </div>
+                    
+                    <button type="submit" class="checklist-form__submit">
+                        Send My Checklist
+                        <i class="fas fa-download"></i>
+                    </button>
+                    
+                    <p class="checklist-form__note">*Already on our waitlist? We'll send it to the same email.</p>
+                </form>
+            </div>
+            
+            <!-- Success View -->
+            <div class="checklist-success" id="checklistSuccess" style="display: none;">
+                <div class="checklist-success__icon">
+                    <i class="fas fa-envelope-circle-check"></i>
+                </div>
+                <h2 class="checklist-success__title">📧 Check your inbox!</h2>
+                <p class="checklist-success__message">Your compliance checklist is on its way.</p>
+                <p class="checklist-success__note">Don't see it? Check your spam folder or contact us at support@ndiscompliancepro.com.au</p>
+                <button class="checklist-success__close" onclick="closeChecklistModal()">Close</button>
+            </div>
+        </div>
+    </div>
     
     <script>
-        // Countdown and redirect
+        // Get email from URL parameter if available (from waitlist form)
+        const urlParams = new URLSearchParams(window.location.search);
+        const prefilledEmail = urlParams.get('email') || localStorage.getItem('waitlistEmail') || '';
+        
+        // Pre-fill email if available
+        if (prefilledEmail) {
+            document.getElementById('checklistEmail').value = prefilledEmail;
+        }
+        
+        // Checklist modal functionality
+        function showChecklistModal() {
+            document.getElementById('checklistModal').style.display = 'flex';
+            // Track modal open
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'checklist_modal_open', {
+                    'event_category': 'engagement'
+                });
+            }
+        }
+        
+        function closeChecklistModal() {
+            document.getElementById('checklistModal').style.display = 'none';
+        }
+        
+        // Event listeners
+        document.getElementById('getChecklistBtn').addEventListener('click', showChecklistModal);
+        document.getElementById('closeChecklistModal').addEventListener('click', closeChecklistModal);
+        document.querySelector('.checklist-modal__overlay').addEventListener('click', closeChecklistModal);
+        
+        // Form submission handling
+        document.getElementById('checklistDownloadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const email = formData.get('email');
+            
+            // Store email for future use
+            localStorage.setItem('checklistEmail', email);
+            
+            // Track checklist download
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'checklist_download', {
+                    'event_category': 'conversion',
+                    'event_label': 'thank_you_page',
+                    'value': 1
+                });
+            }
+            
+            // Submit form via fetch
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Show success view
+                    document.getElementById('checklistForm').style.display = 'none';
+                    document.getElementById('checklistSuccess').style.display = 'block';
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            }).catch(error => {
+                alert('There was an error sending your request. Please try again or contact support.');
+            });
+        });
+        
+        // Countdown and redirect (pause if modal is open)
         let seconds = 10;
         const countdownElement = document.getElementById('countdown');
         
         const countdown = setInterval(function() {
+            // Don't countdown if modal is open
+            if (document.getElementById('checklistModal').style.display === 'flex') {
+                return;
+            }
+            
             seconds--;
             countdownElement.textContent = seconds;
             
@@ -241,6 +651,13 @@
                 window.location.href = '/';
             }
         }, 1000);
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeChecklistModal();
+            }
+        });
     </script>
 </body>
 </html>
