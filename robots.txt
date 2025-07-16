@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /*.py
+
+Sitemap: https://ndiscompliancepro.com.au/sitemap.xml
